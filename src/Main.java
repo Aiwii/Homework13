@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Author author1 = new Author("Стивенсон", "Роберт Льюис");
 
         Book book1 = new Book("The Suicide Club", 1878, author1);
@@ -8,10 +9,21 @@ public class Main {
 
         Book book2 = new Book("Война и мир", 1863, author2);
 
-        System.out.println("Год публикации: " + book1.getPublicationYear());
+        System.out.println(book1);
 
-        book1.setPublicationYear(1879);
+        System.out.println(book2);
 
-        System.out.println("Год публикации: " + book1.getPublicationYear());
+        System.out.println(book1.hashCode());
+
+        System.out.println(book2.hashCode());
+
+        System.out.println(book1.equals(book2));
+
+        Author author3 = new Author("Стивенсон", "Роберт Льюис");
+
+        Book book3 = new Book("The Suicide Club", 1878, author3);
+
+        System.out.println(book1.equals(book3));
+
     }
 }
